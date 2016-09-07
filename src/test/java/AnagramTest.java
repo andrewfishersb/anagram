@@ -32,9 +32,11 @@ public class AnagramTest {
     ArrayList<String>outcome = new ArrayList<String>();
     outcome.add("act");
     outcome.add("cat");
-    outcome.add("arm");
+    outcome.add("trace");
+    outcome.add("crate");
     outcome.add("ram");
-    assertEquals(outcome,test.multipleAnagrams("act hello cat arm ram"));
+    outcome.add("arm");
+    assertEquals(outcome,test.multipleAnagrams("act bumblebee hello trace ram beast arm cat crate"));
   }
 
 }

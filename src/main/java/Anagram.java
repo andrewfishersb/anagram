@@ -23,14 +23,14 @@ public class Anagram{
     String[] sentenceArray = sentence.split("[^a-zA-Z]");
     ArrayList<String> finalList = new ArrayList<String>();
     // ArrayList<String> sentenceList = new ArrayList<String>(Arrays.asList(sentenceArray));
-    for(int i =0;i<sentenceArray.length;i++){
+    for(int i = 0;i<sentenceArray.length;i++){
       boolean initialAdded = false;
 
-      for(int j = 1; j<sentenceArray.length;j++){
+      for(int j = i+1; j<sentenceArray.length;j++){
         if(isAnagram(sentenceArray[i],sentenceArray[j])){
           if(!initialAdded){
             finalList.add(sentenceArray[i]);
-            initialAdded = false;
+            initialAdded = true;
           }
           finalList.add(sentenceArray[j]);
 
